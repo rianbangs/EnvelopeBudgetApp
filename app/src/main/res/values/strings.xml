@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EnvelopeBudgetApp</string>
+    <string name="YourIncome">type your Income</string>
+    <string name="IncomeInput">input your income</string>
+    <string name="IncomeDate">Date of Income</string>
+    <string name="Incomedetail">Input Income Detail</string>
+</resources>
