@@ -4,4 +4,8 @@
     <string name="IncomeInput">input your income</string>
     <string name="IncomeDate">Date of Income</string>
     <string name="Incomedetail">Input Income Detail</string>
+    <string-array name="detail_type_array">
+        <item>Allocated Income</item>
+        <item>Expense</item>
+    </string-array>
 </resources>

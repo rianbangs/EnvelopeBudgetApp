@@ -1,4 +1,4 @@
-package com.example.envelopebudgetapp;
+package com.example.envelopebudgetapp.model;
 
 public class IncomeModel
 {

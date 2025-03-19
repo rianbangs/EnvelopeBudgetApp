@@ -12,78 +12,81 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    tools:context=".MainActivity">
+    tools:context=".controller.MainActivity">
+
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextNumberDecimal"-->
+<!--        android:layout_width="231dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="124dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/IncomeInput"-->
+<!--        android:inputType="numberDecimal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <EditText-->
+<!--        android:id="@+id/IncomeDate"-->
+<!--        android:layout_width="231dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/IncomeDate"-->
+<!--        android:inputType="date"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/IncomeDetail"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:width="231dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/Incomedetail"-->
+<!--        android:inputType="text"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/IncomeDate" />-->
+
 
     <Button
         android:id="@+id/AddIncomeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
         android:text="Add Income"
+        app:layout_constraintBottom_toTopOf="@+id/budget_list"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IncomeDetail" />
-
-    <EditText
-        android:id="@+id/editTextNumberDecimal"
-        android:layout_width="231dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/IncomeInput"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <ListView
         android:id="@+id/budget_list"
-        android:layout_width="337dp"
-        android:layout_height="287dp"
-        android:layout_marginTop="48dp"
-        android:divider="@android:drawable/editbox_background"
+        android:layout_width="389dp"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddIncomeBtn" />
-
-    <EditText
-        android:id="@+id/IncomeDate"
-        android:layout_width="231dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/IncomeDate"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
-
-    <EditText
-        android:id="@+id/IncomeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:width="231dp"
-        android:ems="10"
-        android:hint="@string/Incomedetail"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IncomeDate" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/remainingIncome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="92dp"
         android:text="income"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/budget_list"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <TextView
         android:id="@+id/textView"
@@ -94,9 +97,52 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/remainingIncome"
-        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/budget_list"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintVertical_bias="0.132" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="homeView"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income List"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/AddIncomeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backBtn"
+        app:layout_constraintVertical_bias="0.355" />
+
+    <TextView
+        android:id="@+id/programmerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Programmer: Joseph Rian B. Cirunay"
+
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainingIncome"
+        app:layout_constraintVertical_bias="0.76" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
